@@ -1,8 +1,9 @@
 {
   "name": "@alicloud/open-drive",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Awesome data dispatcher system, cloud drive system.",
   "license": "MIT",
+  "private": false, 
   "author": {
     "name": "aleelock"
   },
