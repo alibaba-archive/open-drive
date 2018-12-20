@@ -1,0 +1,49 @@
+{
+  "name": "ui",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "diff": "^3.5.0",
+    "flv.js": "^1.4.2",
+    "font-awesome": "^4.7.0",
+    "howler": "^2.0.15",
+    "jquery": "^3.3.1",
+    "jsoneditor": "^5.26.2",
+    "lodash": "^4.17.11",
+    "github-markdown-css": "^2.10.0",
+    "highlight.js": "^9.12.0",
+    "markdown-it": "^8.4.1",
+    "markdown-it-highlight": "^0.2.0",
+    "markdown-it-mermaid": "^0.2.5",
+    "material-design-icons-iconfont": "^4.0.2",
+    "mermaid": "^8.0.0-rc.8",
+    "moment": "^2.22.2",
+    "underscore": "^1.9.1",
+    "vee-validate": "^2.1.3",
+    "viewerjs": "^1.3.0",
+    "vue": "~2.5.17",
+    "vue-codemirror-lite": "^1.0.4",
+    "vue-highlightjs": "^1.3.3",
+    "vue-markdown": "^2.2.4",
+    "vue-resource": "^1.5.1",
+    "vue-router": "^3.0.1",
+    "vue-video-player": "^5.0.2",
+    "vuetify": "^1.3.9"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.1.1",
+    "@vue/cli-service": "^3.1.4",
+    "copy-webpack-plugin": "^4.6.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-template-compiler": "^2.5.17"
+  }
+}

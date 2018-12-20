@@ -1,0 +1,74 @@
+[{
+  "name": "快速开始",
+  "children": [{
+    "name": "快速部署",
+    "action": "quickstart/quick-deploy"
+  },
+  {
+    "name": "使用指南",
+    "action": "quickstart/guide"
+  },
+  {
+    "name": "常见问题",
+    "action": "quickstart/faq"
+  }]
+},{
+  "name": "API文档",
+  "children":
+  [
+    {
+      "name": "API总览",
+      "action": "api/all",
+      "children": [
+        {
+          "name": "Auth API",
+          "action": "api/api-auth"
+        },
+        {
+          "name": "Users API",
+          "action": "api/api-users",
+          "children": [
+            {
+              "name": "User Drives API",
+              "action": "api/api-userdrives"
+            },
+            {
+              "name": "User Shares API",
+              "action": "api/api-usershares"
+            }
+          ]
+        },
+        {
+          "name": "Storages API",
+          "action": "api/api-storages" 
+        }, 
+        {
+          "name": "Drives API",
+          "action": "api/api-drives",
+          "children": [
+            {
+              "name": "Files API",
+              "action": "api/api-drive-files"
+            }
+          ]
+        },
+        {
+          "name": "Shares API",
+          "action": "api/api-shares",
+          "children": [
+            {
+              "name": "Files API",
+              "action": "api/api-share-files"
+            }
+          ]
+        },
+        {
+          "name": "API接口返回错误说明",
+          "action": "api/error"
+        }
+      ]
+    } 
+  ]
+}
+  
+]

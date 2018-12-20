@@ -1,0 +1,68 @@
+module.exports = { 
+   
+  //drive_name 最大长度
+  MAX_LEN_DRIVE_NAME: 255,
+
+  MAX_LEN_SHARE_NAME: 255,
+
+  //description 最大长度
+  MAX_LEN_DESC: 255,
+
+  //file_name 最大长度
+  MAX_LEN_FILE_NAME: 255,
+
+  //获取列表时 limit 最大值
+  MAX_LIMIT: 100,
+
+  STATUS_TYPE: ['enabled', 'disabled'],
+  PRIVILEGE_TYPE: ['readonly','writable','grantable'],
+
+  REGEX_REGION: /^[\w\-]+$/,
+  REGEX_BUCKET: /^[a-z0-9][a-z0-9\-]{1,61}[a-z0-9]$/,
+
+  // share 权限
+  PERMISSION_TYPE: ["readonly", "writable"],
+  
+  // 用户角色类型
+  // USER_ROLE_TYPE: ["superadmin", "admin", "readonlyadmin", "general"],
+  
+  // 上传类型， SignUrl、StsToken
+  UPLOAD_TYPE: ["url", "token"],
+  
+  // Drive最大容量 7 PB
+  DRIVE_MAX_SIZE: 1024 * 1024 * 1024 * 1024 * 1024 * 7,
+  // 单文件最大Size 5 TB
+  FILE_MAX_SIZE: 1024 * 1024 * 1024 * 1024 * 5,
+  
+  DEFAULT_LIMIT: 100,
+
+  OK : {
+    code: 'OK',
+    message: 'success'
+  },
+
+  
+  IMAGE_SN_PROCESS : 'image/resize,m_pad,h_64,w_64',
+  IMM_FORMAT_CONVERT_TGT: "imm-format-convert-tgt",
+  IMM_VIDEO_ANALYSE_TGT: "imm-video-analyse-tgt",
+
+  DEFAULT_USER_AVATAR: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFKUlEQVRYR62Xf4hUVRTHv+fMTO02SuAUWyRo9kehBcH+kea8H+2um9uvbYMNFSoRfxWCGWWaVhIapGVktUtiJf6TsZpa5MLW6nv3zSxEUvnHYmGJGMi6bqU1C9vOvHviyhsw3d35Ue/fd+45n3vuPed8L6HKz3XdODPX5fP56cw8RWv9ZxiGJ/r6+gYrcUmVGBvbdDo9g4iaAdhENA0Ai0iOiCYByBPRJ0NDQx/29/ePluO7bADbtm8F8CSAB4jorIhkiKgvFoud0VpfDMNwMoB7mXk9gJ2+7+/83wBc101rrbcBOEVEu4aGhrLj7dC27ccBbBGRr4jobaXUyYlASmbAdd1JWuu9AI4x82bP8woTOayvr78umUzOBrAEwCRmXux53oXx1pQESKfTDzHzOhFpC4LgfDlpNTaNjY2pfD5/QER2BEGwr2oA27bfFJEwCIIXyw1etLMsqwPA+SAIXq0KoL29PTY4OGjSf8T3/c5KARzHWSsiM5RSK6sCmDNnTm0ikTgkIh1BEBysFMC27dUAZiqlVvwXgP0i8lYQBL2VAjiOsx1Awff9tVUBWJZ1IxEdJKKNvu8frRTAtu33ReRCEAQbqgJwXbdJa/1aIpFo6+3tPVcpgOM4C0VkWRiGrdls9q+x1k9Yho7jzNNavyIij2QymT+qAGgTkVXM3Op5Xq5iANd1b9Ba7wfQoZT6tBIAM6y01rtF5Jeqy9AEdBxnmUkjMz/jed6xciCi4KYC2gE8MVE7LtkJZ82adU0qlXrJDCFmXu553g+lIKLye0pEXihVPSUBomBs27YpqalRbx/zPI2t67p3a60/ArBRKXW4FGy5AMbxTVrrPUSU8X1/MwB9pXPLsm4moo8BfK+UMqV3lc2Va8oGiO6DJSImE48ppX693Fl9fX0imUx2ElEqHo8v7e3t/a3U7s3/igAiXfBGoVBou1J6zZ07dzIzH2bm7b7vHygneEUAzc3NyZGRkQ/MdFNKrRkrgOM4W0XkTnNZa2trz+dyuTSABgCmo/6utc7E43Hv8p5QMgNmIg4MDMxm5mdFpJaZV3med3osgOiebAIwQES3ichMIvpORH4CMB3APURk/r1crKbxAMi27akA7jPlB+B2EenRWr+TzWbPTpReI1qZ2TSgnxOJxJZUKnV6YGBgSiwWM53UXOTnDUgYhkuz2Wz/vwBM5wvDcD4RzQNwB4CLRguEYfiFMS7nXKNjmFZTU7Okp6dnuKGh4ZZCofAugA1KqRNRX+kgolgul1teBGDLsh4moudERBPR1wCO1tTUHDdOyglsbKJgRoatLzaglpaWa4eHh2cy88ni2du2fReA3US08hKAZVkLiGgDEe0goq6JROREMLZt2wBeTyQSrcUyjKqjIRaL+UW/RujE4/HPL436pqam60dHR7uIaF+5Wn48CMuyGoloPTM/Wtyt67rTtdZmkC02R2DWRsdgFJaidDpdz8ydWusFmUzmVLnpHssuSu0eAIuKwSKAvVEL/9Gsa2xsNE+6Q0S0hSzLepCI1oRh2DaeaCgXynXdmmi33yqlTLs2LfyqDDiOs1xrvTAWi7WbcltknlzJZLK1u7v773KDjWdnRIzRkAA2KaU+i867WWt9xGwwUllbiWib7/ufGACj9+8HsIKZ89UCMLNorc95njdiWdZiIlotIgGAL4noDAAzqOaLSAuAXXV1de91dXWFBmCdqVEAFT2rxwAd0VovyWQy30SV5RDR0wDmAkiYlzOA4yLSGQRBd3FS/gNiV34EApKBXQAAAABJRU5ErkJggg==`,
+
+  DEFAULT_LOGO: `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFKUlEQVRYR62Xf4hUVRTHv+fMTO02SuAUWyRo9kehBcH+kea8H+2um9uvbYMNFSoRfxWCGWWaVhIapGVktUtiJf6TsZpa5MLW6nv3zSxEUvnHYmGJGMi6bqU1C9vOvHviyhsw3d35Ue/fd+45n3vuPed8L6HKz3XdODPX5fP56cw8RWv9ZxiGJ/r6+gYrcUmVGBvbdDo9g4iaAdhENA0Ai0iOiCYByBPRJ0NDQx/29/ePluO7bADbtm8F8CSAB4jorIhkiKgvFoud0VpfDMNwMoB7mXk9gJ2+7+/83wBc101rrbcBOEVEu4aGhrLj7dC27ccBbBGRr4jobaXUyYlASmbAdd1JWuu9AI4x82bP8woTOayvr78umUzOBrAEwCRmXux53oXx1pQESKfTDzHzOhFpC4LgfDlpNTaNjY2pfD5/QER2BEGwr2oA27bfFJEwCIIXyw1etLMsqwPA+SAIXq0KoL29PTY4OGjSf8T3/c5KARzHWSsiM5RSK6sCmDNnTm0ikTgkIh1BEBysFMC27dUAZiqlVvwXgP0i8lYQBL2VAjiOsx1Awff9tVUBWJZ1IxEdJKKNvu8frRTAtu33ReRCEAQbqgJwXbdJa/1aIpFo6+3tPVcpgOM4C0VkWRiGrdls9q+x1k9Yho7jzNNavyIij2QymT+qAGgTkVXM3Op5Xq5iANd1b9Ba7wfQoZT6tBIAM6y01rtF5Jeqy9AEdBxnmUkjMz/jed6xciCi4KYC2gE8MVE7LtkJZ82adU0qlXrJDCFmXu553g+lIKLye0pEXihVPSUBomBs27YpqalRbx/zPI2t67p3a60/ArBRKXW4FGy5AMbxTVrrPUSU8X1/MwB9pXPLsm4moo8BfK+UMqV3lc2Va8oGiO6DJSImE48ppX693Fl9fX0imUx2ElEqHo8v7e3t/a3U7s3/igAiXfBGoVBou1J6zZ07dzIzH2bm7b7vHygneEUAzc3NyZGRkQ/MdFNKrRkrgOM4W0XkTnNZa2trz+dyuTSABgCmo/6utc7E43Hv8p5QMgNmIg4MDMxm5mdFpJaZV3med3osgOiebAIwQES3ichMIvpORH4CMB3APURk/r1crKbxAMi27akA7jPlB+B2EenRWr+TzWbPTpReI1qZ2TSgnxOJxJZUKnV6YGBgSiwWM53UXOTnDUgYhkuz2Wz/vwBM5wvDcD4RzQNwB4CLRguEYfiFMS7nXKNjmFZTU7Okp6dnuKGh4ZZCofAugA1KqRNRX+kgolgul1teBGDLsh4moudERBPR1wCO1tTUHDdOyglsbKJgRoatLzaglpaWa4eHh2cy88ni2du2fReA3US08hKAZVkLiGgDEe0goq6JROREMLZt2wBeTyQSrcUyjKqjIRaL+UW/RujE4/HPL436pqam60dHR7uIaF+5Wn48CMuyGoloPTM/Wtyt67rTtdZmkC02R2DWRsdgFJaidDpdz8ydWusFmUzmVLnpHssuSu0eAIuKwSKAvVEL/9Gsa2xsNE+6Q0S0hSzLepCI1oRh2DaeaCgXynXdmmi33yqlTLs2LfyqDDiOs1xrvTAWi7WbcltknlzJZLK1u7v773KDjWdnRIzRkAA2KaU+i867WWt9xGwwUllbiWib7/ufGACj9+8HsIKZ89UCMLNorc95njdiWdZiIlotIgGAL4noDAAzqOaLSAuAXXV1de91dXWFBmCdqVEAFT2rxwAd0VovyWQy30SV5RDR0wDmAkiYlzOA4yLSGQRBd3FS/gNiV34EApKBXQAAAABJRU5ErkJggg==`,
+  
+  DING_API: 'https://oapi.dingtalk.com',
+  ALIPAY_AUTH: 'https://openauth.alipay.com/oauth2/publicAppAuthorize.htm',
+  // ALIPAY_API: 'https://openapi.alipay.com/gateway.do',
+ 
+  
+  AUTH_CALLBACK: "/api/callback",
+
+  //code cache 过期时间: 10 minutes
+  CODE_CACHE_EXPIRES_SEC: 600, 
+
+  // accessToken过期时间
+  ACCESS_TOKEN_EXPIRES_TIME: 3600 * 2,
+
+  // refreshToken过期时间
+  REFRESH_TOKEN_EXPIRES_TIME: 3600 * 24 * 7
+}
