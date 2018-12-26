@@ -75,8 +75,8 @@ async function getStsToken(ctx) {
 
     Object.assign(opt,{
       storage_id: driveInfo.storage_id,
-      source_path: joinPath('/', driveInfo.drive_id, '/'),
-      storage_source_path: joinPath('/', driveInfo.drive_id, '/')
+      source_path: driveInfo.source_path,
+      storage_source_path: driveInfo.storage_source_path
     });
 
   }
@@ -155,8 +155,8 @@ async function getSignedUrl(ctx) {
 
     Object.assign(opt,{
       storage_id: driveInfo.storage_id,
-      source_path: joinPath('/', driveInfo.drive_id, '/'),
-      storage_source_path: joinPath('/', driveInfo.drive_id, '/')
+      source_path: driveInfo.source_path,
+      storage_source_path: driveInfo.storage_source_path
     });
   }
 
@@ -174,7 +174,7 @@ async function getSignedUrl(ctx) {
     opt.name);
 
   oss_key = oss_key.replace(/^\//, '');
-
+  
   var result = await FileService.getSignedUrlInner(storageInfo, oss_key, opt.type == 'upload', opt.name, opt.expires_sec, opt.content_type, opt.content_md5);
   ctx.status = 201;
   ctx.body = result;
